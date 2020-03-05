@@ -1,0 +1,17 @@
+@charset "utf-8";
+
+$pomegranate: #ef3c1e;
+$san-marino: #3f57a1;
+$golden-grass: #d79922;
+$periwinkle-gray: #c3cae4;
+$mint-julep: #f1e1bf;
+
+// Update Bulma's global variables
+$grey-dark: $san-marino;
+$grey-light: $mint-julep;
+$primary: $pomegranate;
+$link: $periwinkle-gray;
+
+.has-background-grey-dark {
+  background-color: $grey-dark;
+}

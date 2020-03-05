@@ -1,0 +1,35 @@
+@charset "utf-8";
+
+@import "./animate.css/source/_base";
+@import "./animate.css/source/sliding_entrances/slideInUp";
+@import "./animate.css/source/sliding_entrances/slideInRight";
+@import "./animate.css/source/fading_entrances/fadeInRight";
+@import "./animate.css/source/fading_entrances/fadeIn";
+
+.is-animated {
+  @extend .animated;
+}
+
+.slides-in-up {
+  @extend .slideInUp;
+}
+
+.slides-in-right {
+  @extend .slideInRight;
+}
+
+.fades-in {
+  @extend .fadeIn;
+}
+
+.fades-in-right {
+  @extend .fadeInRight;
+}
+
+@for $i from 1 through 10 {
+  $delay-ms: $i * 10ms;
+
+  .is-delayed-#{$delay-ms} {
+    animation-delay: $delay-ms;
+  }
+}
