@@ -38,40 +38,22 @@
 <section class="section">
   <div class="container">
     <div class="columns is-centered">
+      {{ range (where .Pages ".Section" "in" .Site.Params.featured_sections) }}
       <div class="column is-one-quarter">
         <div class="card has-text-centered is-animated slides-in-up">
           <div class="card-image is-animated slides-in-right">
             <figure class="image">
-              <img src="/dist/200.jpg" alt="">
+              <img src="{{ .Params.image }}" alt="{{ .Title }}">
             </figure>
           </div>
           <div class="card-content">
-            <h2 class="title is-2">Blog</h2>
-            <p class="content">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corporis aliquid totam illo iusto vel suscipit
-              molestiae sapiente, explicabo, incidunt veniam nemo eaque, quod delectus ex magnam reprehenderit eveniet
-              et facilis!
-            </p>
+            <h2 class="title is-2">{{ .Title }}</h2>
+            <p class="content">{{ .Description }}</p>
+            <a href="{{ .Permalink }}" class="button">{{ T .Params.read_more_label | humanize }}</a>
           </div>
         </div>
       </div>
-      <div class="column is-one-quarter">
-        <div class="card has-text-centered is-animated slides-in-up is-delayed-30ms">
-          <div class="card-image is-animated slides-in-right">
-            <figure class="image">
-              <img src="/dist/200.jpg" alt="">
-            </figure>
-          </div>
-          <div class="card-content">
-            <h2 class="title is-2">Materiale</h2>
-            <p class="content">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias voluptatum necessitatibus eveniet
-              corrupti nostrum laudantium neque nobis esse officia? Est nihil id cumque quam non quod praesentium totam
-              reprehenderit quis?
-            </p>
-          </div>
-        </div>
-      </div>
+      {{- end -}}
     </div>
   </div>
 </section>
