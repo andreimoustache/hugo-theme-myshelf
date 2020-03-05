@@ -1,0 +1,46 @@
+<footer class="footer section">
+  <div class="container">
+    <div class="columns">
+      <div class="column">
+        <div class="has-text-centered">
+          <h1 class="title is-1">{{ .Site.Title }}</h1>
+        </div>
+      </div>
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-one-fifth">
+        <figure class="image">
+          <p class="image">
+            <img src="{{ .Site.Params.author.picture }}">
+          </p>
+        </figure>
+      </div>
+      <div class="column is-one-fifth">
+        <h4 class="title is-4">Contact</h4>
+        <p class="content">{{ .Site.Params.contact }}</p>
+      </div>
+      <div class="column is-one-fifth">
+        <h4 class="title is-4">Shelf</h4>
+        <ul class="is-not-decorated">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Materiale</a></li>
+        </ul>
+      </div>
+      <div class="column is-one-fifth">
+        <h4 class="title is-4">Social</h4>
+        <ul class="is-not-decorated">
+          <li><a href="#">Facebook</a></li>
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">mail@mail.com</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="has-top-padding has-top-border">
+      <p class="content is-small has-text-centered">
+        {{ .Site.Params.copyright | markdownify }}
+      </p>
+    </div>
+  </div>
+</footer>

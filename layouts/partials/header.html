@@ -1,0 +1,18 @@
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a class="navbar-item" href="{{ .Site.BaseURL | relLangURL }}">
+      <img src="{{ .Site.Params.logo | absURL }}" alt="{{ .Site.Title }}" width="112" height="28">
+    </a>
+  </div>
+
+  <div class="navbar-menu">
+    <div class="navbar-start"></div>
+
+    <div class="navbar-end">
+      <a class="navbar-item">Home</a>
+      <a class="navbar-item">About me</a>
+      <a class="navbar-item">Blog</a>
+      <a class="navbar-item">Materials</a>
+    </div>
+  </div>
+</nav>
