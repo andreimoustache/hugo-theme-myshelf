@@ -9,10 +9,9 @@
     <div class="navbar-start"></div>
 
     <div class="navbar-end">
-      <a class="navbar-item">Home</a>
-      <a class="navbar-item">About me</a>
-      <a class="navbar-item">Blog</a>
-      <a class="navbar-item">Materials</a>
+    {{- range .Site.Menus.main -}}
+      <a class="navbar-item" href="{{ .URL | absLangURL }}">{{ .Name }}</a>
+    {{- end -}}
     </div>
   </div>
 </nav>
