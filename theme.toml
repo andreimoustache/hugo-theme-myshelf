@@ -1,0 +1,9 @@
+name = "MyShelf"
+license = ""
+description = "Hugo theme for My Montessori Shelf"
+homepage = "https://mymontessorishelf.com/"
+min_version = "0.58.0"
+
+[author]
+  name = "Andrei Mustață"
+  homepage = "https://amoustache.net/"
