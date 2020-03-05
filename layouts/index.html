@@ -17,23 +17,19 @@
   <div class="container">
     <div class="columns is-centered">
       <div class="column is-two-thirds">
+        {{- range first 1 (where .Site.RegularPages "Type" "about") -}}
         <div class="columns is-vcentered is-variable is-8">
           <div class="column is-one-third">
             <figure class="image">
-              <p class="image">
-                <img src="/dist/author.jpg">
-              </p>
+              <img src="{{ .Params.Image | absURL }}">
             </figure>
           </div>
           <div class="column">
-            <p class="content is-medium">
-              Sunt Simona, pedagog 3-6 Montessori, loving the method, and trying to be my best version at it (sometimes
-              successfully, other times not). I love making Montessori materials for my class, so I thought why not
-              share them with others
-            </p>
-            <a href="about.html" class="button">About me</a>
+            <p class="content is-medium">{{ .Description }}</p>
+            <a href="{{ .Permalink }}" class="button">{{ T "landing_about_more" }}</a>
           </div>
         </div>
+        {{- end -}}
       </div>
     </div>
   </div>
