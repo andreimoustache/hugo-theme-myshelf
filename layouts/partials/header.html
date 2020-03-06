@@ -12,6 +12,29 @@
     {{- range .Site.Menus.main -}}
       <a class="navbar-item" href="{{ .URL | absLangURL }}">{{ .Name }}</a>
     {{- end -}}
+
+    {{- if .Site.IsMultiLingual -}}
+      <div class="navbar-item is-hoverable has-dropdown">
+
+        {{- $nextLanguage := index (first 1 (where .Site.Languages "Lang" "!=" $.Site.Language.Lang)) 0 -}}
+        {{- $linkText := print $nextLanguage.Params.switchLanguageText " " $nextLanguage.LanguageName -}}
+        <div class="navbar-link">{{ $linkText }}</div>
+
+        <div class="navbar-dropdown is-right">
+        {{- range .Site.Languages -}}
+        {{- if eq $.Site.Language.Lang .Lang }}
+          <a class="is-active navbar-item" rel="alternate" href="{{ .Lang | relURL }}" hreflang="{{ .Lang }}" lang="{{ .Lang }}">
+            {{ .Params.switchLanguageText }} {{ .LanguageName }}
+          </a>
+        {{- else -}}
+          <a class="navbar-item" rel="alternate" href="{{ .Lang | relURL }}" hreflang="{{ .Lang }}" lang="{{ .Lang }}">
+            {{ .Params.switchLanguageText }} {{ .LanguageName }}
+          </a>
+        {{- end -}}
+        {{- end -}}
+        </div>
+      </div>
+    {{- end -}}
     </div>
   </div>
 </nav>
