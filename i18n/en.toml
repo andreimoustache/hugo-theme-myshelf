@@ -15,3 +15,10 @@
 
 [post_read_more]
     other = "Read more"
+
+[default_read_full]
+    other = "Read"
+
+[reading_time]
+    one = "{{ .Count }} minute"
+    other = "{{ .Count }} minutes"
