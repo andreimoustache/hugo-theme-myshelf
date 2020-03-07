@@ -58,47 +58,20 @@
   </div>
 </section>
 
-<section class="section">
+{{- range first 1 (where .Site.RegularPages "Type" "subscribe") -}}
+<section class="section has-background-grey-dark">
   <div class="container">
     <div class="columns is-centered is-vcentered">
       <div class="column is-one-quarter">
-        <h3 class="title is-3">Newsletter</h3>
-        <p class="content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur perferendis numquam
-          voluptatibus laborum nam deserunt atque? Minima debitis laudantium libero nisi nulla ut laboriosam eligendi.
-          Obcaecati non amet iure qui.</p>
+        <h3 class="title is-3 has-text-white">{{ .Title }}</h3>
+        <p class="content has-text-white">{{ .Description }}</p>
       </div>
       <div class="column is-half">
-        <div class="field is-horizontal">
-          <div class="field-body">
-
-            <div class="field">
-              <div class="control has-icons-left has-icons-right">
-                <input class="input" type="email" placeholder="E-mail address">
-                <span class="icon is-small is-left">
-                  <i class="fas fa-envelope"></i>
-                </span>
-              </div>
-            </div>
-
-            <div class="field">
-              <div class="select is-fullwidth">
-                <select>
-                  <option>I'm a ...</option>
-                  <option>I'm a teacher</option>
-                  <option>I'm a parent</option>
-                  <option>Neither, but I'm interested!</option>
-                </select>
-              </div>
-            </div>
-
-            <div class="field">
-              <button class="button is-primary">Subscribe</button>
-            </div>
-          </div>
-        </div>
+        {{ .Content | markdownify }}
       </div>
     </div>
   </div>
 </section>
+{{ end }}
 
 {{ end }}
