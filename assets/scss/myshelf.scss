@@ -3,6 +3,21 @@
 @import "./colours.scss";
 @import "./animations.scss";
 
+@import "./bulma/sass/utilities/_all.sass";
+@import "./bulma/sass/base/_all.sass";
+@import "./bulma/sass/elements/_all.sass";
+@import "./bulma/sass/form/_all.sass";
+@import "./bulma/sass/layout/_all.sass";
+@import "./bulma/sass/components/_all.sass";
+@import "./bulma/sass/grid/_all.sass";
+
+
+.photo-attribution {
+  top: auto;
+  padding-right: 1rem;
+  padding-bottom: 0.5rem;
+}
+
 .has-top-padding {
   padding-top: 1rem;
 }
@@ -14,11 +29,3 @@
 .is-not-decorated {
   list-style-type: none;
 }
-
-@import "./bulma/sass/utilities/_all.sass";
-@import "./bulma/sass/base/_all.sass";
-@import "./bulma/sass/elements/_all.sass";
-@import "./bulma/sass/form/_all.sass";
-@import "./bulma/sass/layout/_all.sass";
-@import "./bulma/sass/components/_all.sass";
-@import "./bulma/sass/grid/_all.sass";

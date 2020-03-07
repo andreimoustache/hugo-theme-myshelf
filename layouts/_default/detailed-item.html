@@ -2,6 +2,9 @@
   <div class="card-image">
     <figure class="image">
       <img src="{{ .Params.Image | absURL }}" alt="{{ .Title }}">
+      <figcaption class="photo-attribution is-overlay has-text-right">
+        <span class="content is-small has-text-white is-italic">{{ .Params.imageAttribution | markdownify }}</span>
+      </figcaption>
     </figure>
   </div>
   <div class="card-content">
