@@ -13,7 +13,7 @@
   </div>
 </section>
 
-<section class="section">
+<section class="section has-background-dark-shade has-text-white">
   <div class="container">
     <div class="columns is-centered">
       <div class="column is-two-thirds">
@@ -40,16 +40,16 @@
     <div class="columns is-centered">
       {{ range (where .Pages ".Section" "in" .Site.Params.featured_sections) }}
       <div class="column is-one-quarter">
-        <div class="card has-text-centered is-animated slides-in-up">
+        <div class="card has-text-centered is-animated slides-in-up has-background-dark-shade has-text-white">
           <div class="card-image is-animated slides-in-right">
             <figure class="image">
-              <img src="{{ .Params.image }}" alt="{{ .Title }}">
+              <img src="/images/author.jpg" alt="{{ .Title }}">
             </figure>
           </div>
-          <div class="card-content">
-            <h2 class="title is-2">{{ .Title }}</h2>
+          <div class="card-content has-background-dark-shade">
+            <h2 class="title is-2 has-text-white">{{ .Title }}</h2>
             <p class="content">{{ .Description }}</p>
-            <a href="{{ .Permalink }}" class="button">{{ T .Params.read_more_label | humanize }}</a>
+            <a href="{{ .Permalink }}" class="button is-primary is-outlined">{{ T .Params.read_more_label | humanize }}</a>
           </div>
         </div>
       </div>

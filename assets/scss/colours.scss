@@ -7,11 +7,21 @@ $periwinkle-gray: #c3cae4;
 $mint-julep: #f1e1bf;
 
 // Update Bulma's global variables
-$grey-dark: $san-marino;
-$grey-light: $mint-julep;
 $primary: $pomegranate;
+$dark: $san-marino;
+$accent-light: $periwinkle-gray;
+$shade-light: $mint-julep;
+$shade-dark: $golden-grass;
 $link: $periwinkle-gray;
 
 .has-background-grey-dark {
   background-color: $grey-dark;
+}
+
+.has-background-grey-light {
+  background-color: $grey-light;
+}
+
+.has-background-dark-shade { 
+  background-color: $golden-grass;
 }
