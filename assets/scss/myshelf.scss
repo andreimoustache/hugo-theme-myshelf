@@ -1,8 +1,10 @@
 @charset "utf-8";
 
+@import "./variables.scss";
 @import "./colours.scss";
 @import "./animations.scss";
 @import "./typography.scss";
+@import "./components.scss";
 
 @import "./bulma/sass/utilities/_all.sass";
 @import "./bulma/sass/base/_all.sass";

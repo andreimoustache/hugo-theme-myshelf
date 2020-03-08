@@ -1,0 +1,17 @@
+@charset "utf-8";
+
+@import "./variables.scss";
+@import "./bulma/sass/utilities/initial-variables.sass";
+
+.section-card {
+  @extend .box;
+  @extend .card;
+
+  .card-image {
+    margin-top: -$image-margin * 2;
+
+    img {
+      border-radius: $radius-large;
+    }
+  }  
+}
