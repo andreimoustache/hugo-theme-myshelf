@@ -1,8 +1,5 @@
 @charset "utf-8";
 
-@import "./variables.scss";
-@import "./bulma/sass/utilities/initial-variables.sass";
-
 .is-rounded {
   img {
     border-radius: $radius-large;
@@ -18,6 +15,12 @@
 
   @extend .is-rounded;
   }  
+}
+
+@include until($desktop) {
+  .section-card {
+    margin-top: $column-gap * 2;
+  }
 }
 
 .cookie-consent {

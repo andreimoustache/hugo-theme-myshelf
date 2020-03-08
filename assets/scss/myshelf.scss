@@ -2,9 +2,6 @@
 
 @import "./variables.scss";
 @import "./colours.scss";
-@import "./animations.scss";
-@import "./typography.scss";
-@import "./components.scss";
 
 @import "./bulma/sass/utilities/_all.sass";
 @import "./bulma/sass/base/_all.sass";
@@ -14,6 +11,10 @@
 @import "./bulma/sass/components/_all.sass";
 @import "./bulma/sass/grid/_all.sass";
 
+
+@import "./animations.scss";
+@import "./typography.scss";
+@import "./components.scss";
 
 .photo-attribution {
   top: auto;
