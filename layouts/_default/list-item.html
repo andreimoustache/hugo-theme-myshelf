@@ -1,4 +1,4 @@
-<div class="card has-text-centered">
+<div class="section-card has-background-shade-dark has-text-white">
   <div class="card-image">
     <figure class="image">
       <img src="{{ .Params.Image | absURL }}" alt="{{ .Title }}">
@@ -12,7 +12,7 @@
         <a href="{{ `categories/` | relLangURL }}{{ . | urlize | lower }}" class="text-primary">#{{ . | title | humanize }}</a>
       {{ end }}
     </p>
-    <h3 class="title is-3">{{ .Title }}</h3>
+    <h3 class="title is-3 has-text-white">{{ .Title }}</h3>
     <p class="content is-small">{{ .Description }}</p>
     
     <div class="level">
@@ -23,7 +23,7 @@
       </div>
       <div class="level-right">
         <div class="level-item">
-          <a class="button is-primary is-outlined" href="{{ .Permalink }}">{{ T "default_read_full" }}</a>
+          <a class="button is-primary" href="{{ .Permalink }}">{{ T "default_read_full" }}</a>
         </div>
       </div>
     </div>
