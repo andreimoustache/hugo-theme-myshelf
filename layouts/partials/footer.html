@@ -1,3 +1,13 @@
+{{- range first 1 (where .Site.RegularPages "Type" "cookies") -}}
+<section class="cookie-consent message is-accent-dark is-animated slides-in-right">
+  <div class="message-header">{{ .Title }}</div>
+  <div class="message-body">
+    <p class="content">{{ .Description | markdownify }}</p>
+    <button class="button is-accent-dark is-fullwidth" onclick="this.parentElement.parentElement.style.display = 'none';">OK</button>
+  </div>
+</section>
+{{- end -}}
+
 <footer class="footer section has-background-shade-light has-text-accent-dark">
   <div class="container">
     <div class="columns">
