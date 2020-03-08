@@ -3,6 +3,12 @@
 @import "./variables.scss";
 @import "./bulma/sass/utilities/initial-variables.sass";
 
+.is-rounded {
+  img {
+    border-radius: $radius-large;
+  }
+}
+
 .section-card {
   @extend .box;
   @extend .card;
@@ -10,9 +16,7 @@
   .card-image {
     margin-top: -$image-margin * 2;
 
-    img {
-      border-radius: $radius-large;
-    }
+  @extend .is-rounded;
   }  
 }
 

@@ -5,7 +5,7 @@
     <div class="hero">
       <div class="hero-body">
         <div class="container">
-          <h1 class="title has-text-accent-dark">My Montessori Shelf</h1>
+          <h1 class="title has-text-primary">My Montessori Shelf</h1>
           <h2 class="subtitle has-text-accent-dark">A shelfful of Montesstories</h2>
         </div>
       </div>
@@ -20,8 +20,8 @@
         {{- range first 1 (where .Site.RegularPages "Type" "about") -}}
         <div class="columns is-vcentered is-variable is-8">
           <div class="column is-one-third">
-            <figure class="image">
-              <img src="{{ .Params.Image | absURL }}" style="border-radius: 6px;">
+            <figure class="image is-rounded">
+              <img src="{{ .Params.Image | absURL }}">
             </figure>
           </div>
           <div class="column">
@@ -41,7 +41,7 @@
       {{ range (where .Pages ".Section" "in" .Site.Params.featured_sections) }}
       <div class="column is-one-quarter">
         <div class="section-card is-animated slides-in-up has-background-shade-dark has-text-white">
-          <div class="card-image is-animated slides-in-right">
+          <div class="card-image is-animated slides-in-up">
             <figure class="image">
               <img src="/images/author.jpg" alt="{{ .Title }}">
             </figure>
