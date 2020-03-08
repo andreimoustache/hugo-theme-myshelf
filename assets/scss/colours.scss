@@ -1,27 +1,29 @@
 @charset "utf-8";
 
+@import "./bulma/sass/utilities/functions.sass";
+
 $pomegranate: #ef3c1e;
 $san-marino: #3f57a1;
-$golden-grass: #d79922;
 $periwinkle-gray: #c3cae4;
 $mint-julep: #f1e1bf;
+$golden-grass: #d79922;
+
+$sycamore: #7d8d41;
+$sorbus: #fa7c09;
+$pomi: #f44336;
 
 // Update Bulma's global variables
 $primary: $pomegranate;
-$dark: $san-marino;
-$accent-light: $periwinkle-gray;
-$shade-light: $mint-julep;
-$shade-dark: $golden-grass;
 $link: $periwinkle-gray;
+$success: $sycamore;
+$warning: $sorbus;
+$danger: $pomi;
+// $scheme-main: $san-marino;
+// $scheme-invert: $mint-julep;
 
-.has-background-grey-dark {
-  background-color: $grey-dark;
-}
-
-.has-background-grey-light {
-  background-color: $grey-light;
-}
-
-.has-background-dark-shade { 
-  background-color: $golden-grass;
-}
+$custom-colors: (
+  "accent-dark": ($san-marino, $mint-julep),
+  "accent-light": ($periwinkle-gray, $golden-grass),
+  "shade-dark": ($golden-grass, $periwinkle-gray),
+  "shade-light": ($mint-julep, $san-marino)
+);
