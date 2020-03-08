@@ -5,15 +5,15 @@
     <div class="hero">
       <div class="hero-body">
         <div class="container">
-          <h1 class="title">My Montessori Shelf</h1>
-          <h2 class="subtitle">A shelfful of Montesstories</h2>
+          <h1 class="title has-text-accent-dark">My Montessori Shelf</h1>
+          <h2 class="subtitle has-text-accent-dark">A shelfful of Montesstories</h2>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<section class="section has-background-dark-shade has-text-white">
+<section class="section has-background-shade-dark has-text-white">
   <div class="container">
     <div class="columns is-centered">
       <div class="column is-two-thirds">
@@ -21,12 +21,12 @@
         <div class="columns is-vcentered is-variable is-8">
           <div class="column is-one-third">
             <figure class="image">
-              <img src="{{ .Params.Image | absURL }}">
+              <img src="{{ .Params.Image | absURL }}" style="border-radius: 6px;">
             </figure>
           </div>
           <div class="column">
             <p class="content is-medium">{{ .Description }}</p>
-            <a href="{{ .Permalink }}" class="button">{{ T "landing_about_more" }}</a>
+            <a href="{{ .Permalink }}" class="button is-primary is-family-sans-serif">{{ T "landing_about_more" }}</a>
           </div>
         </div>
         {{- end -}}
@@ -40,14 +40,14 @@
     <div class="columns is-centered">
       {{ range (where .Pages ".Section" "in" .Site.Params.featured_sections) }}
       <div class="column is-one-quarter">
-        <div class="section-card is-animated slides-in-up has-background-shade-light">
+        <div class="section-card is-animated slides-in-up has-background-shade-dark has-text-white">
           <div class="card-image is-animated slides-in-right">
             <figure class="image">
               <img src="/images/author.jpg" alt="{{ .Title }}">
             </figure>
           </div>
           <div class="card-content has-background-dark-shade">
-            <h2 class="title is-2 has-text-primary">{{ .Title }}</h2>
+            <h2 class="title is-2 has-text-white">{{ .Title }}</h2>
             <p class="content">{{ .Description }}</p>
             <a href="{{ .Permalink }}" class="button is-primary is-fullwidth is-family-sans-serif">{{ T .Params.read_more_label | humanize }}</a>
           </div>
@@ -59,7 +59,7 @@
 </section>
 
 {{- range first 1 (where .Site.RegularPages "Type" "subscribe") -}}
-<section class="section has-background-grey-dark">
+<section class="section has-background-accent-dark">
   <div class="container">
     <div class="columns is-centered is-vcentered">
       <div class="column is-one-quarter">

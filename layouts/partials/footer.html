@@ -1,9 +1,9 @@
-<footer class="footer section">
+<footer class="footer section has-background-shade-light has-text-accent-dark">
   <div class="container">
     <div class="columns">
       <div class="column">
         <div class="has-text-centered">
-          <h1 class="title is-1">{{ .Site.Title }}</h1>
+          <h1 class="title is-1 has-text-primary">{{ .Site.Title }}</h1>
         </div>
       </div>
     </div>
@@ -16,22 +16,22 @@
         </figure>
       </div>
       <div class="column is-one-fifth">
-        <h4 class="title is-4">{{ T "footer_contact_header" }}</h4>
-        <p class="content">{{ .Site.Params.contact }}</p>
+        <h4 class="title is-4 has-text-accent-dark">{{ T "footer_contact_header" }}</h4>
+        <p class="content has-text-accent-dark">{{ .Site.Params.contact }}</p>
       </div>
       <div class="column is-one-fifth">
-        <h4 class="title is-4">{{ T "footer_links_header" }}</h4>
+        <h4 class="title is-4 has-text-accent-dark">{{ T "footer_links_header" }}</h4>
         <ul class="is-not-decorated">
         {{- range .Site.Menus.main -}}
-          <li><a href="{{ .URL | absLangURL }}">{{ .Name }}</a></li>
+          <li><a class="has-text-accent-dark" href="{{ .URL | absLangURL }}">{{ .Name }}</a></li>
         {{- end -}}
         </ul>
       </div>
       <div class="column is-one-fifth">
-        <h4 class="title is-4">{{ T "footer_social_header" }}</h4>
+        <h4 class="title is-4 has-text-accent-dark">{{ T "footer_social_header" }}</h4>
         <ul class="is-not-decorated">
         {{- range .Site.Menus.social -}}
-          <li><a href="{{ .URL | absLangURL }}">{{ .Name }}</a></li>
+          <li><a class="has-text-accent-dark" href="{{ .URL | absLangURL }}">{{ .Name }}</a></li>
         {{- end -}}
         </ul>
       </div>
