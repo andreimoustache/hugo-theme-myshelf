@@ -16,7 +16,8 @@
   {{- template "_internal/twitter_cards.html" . -}}
 
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bree+Serif|Open+Sans">
-  {{ $styles := resources.Get "scss/myshelf.scss" | toCSS | minify }}
+  {{ $toCSSOptions := dict "targetPath" "css/main.css" }}
+  {{ $styles := resources.Get "scss/myshelf.scss" | toCSS $toCSSOptions | minify | fingerprint "md5" }}
   <link rel="stylesheet" href="{{ $styles.Permalink }}" media="screen">
 
   {{ template "_internal/google_analytics_async.html" . }}
