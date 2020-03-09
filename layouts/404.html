@@ -1,0 +1,25 @@
+{{ define "main" }}
+
+<section class="section">
+  <div class="container">
+    <div class="hero">
+      <div class="hero-body">
+        <div class="container">
+          <div class="columns is-vcentered">
+            <div class="column is-a-quarter">
+              <figure class="image">
+                <img src="{{ .Site.Params.logo | absURL }}" alt="{{ .Title }} logo">
+              </figure>
+            </div>
+            <div class="column">
+              <h1 class="title has-text-primary">{{ .Title }}</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+{{ end }}
