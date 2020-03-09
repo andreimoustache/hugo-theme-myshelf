@@ -2,7 +2,7 @@ module.exports = {
   plugins: {
     '@fullhuman/postcss-purgecss': {
       content: [
-        './layouts/**/*.html'
+        './themes/myshelf/layouts/**/*.html'
       ],
       whitelist: [
         'highlight',
@@ -10,6 +10,12 @@ module.exports = {
         'video',
         'code',
         'content',
+        'field',
+        'field-body',
+        'control',
+        'is-fullwidth',
+        'input',
+        'select',
         'h3',
         'h4',
         'h5',
