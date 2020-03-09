@@ -30,7 +30,7 @@
         <div class="columns is-vcentered is-variable is-8">
           <div class="column is-one-third">
             <figure class="image is-rounded">
-              <img src="{{ .Params.Image | absURL }}">
+              <img src="{{ .Params.Image | absURL }}" alt="{{ .Title }}">
             </figure>
           </div>
           <div class="column">
@@ -52,7 +52,7 @@
         <div class="section-card is-animated slides-in-up has-background-shade-dark has-text-white">
           <div class="card-image is-animated slides-in-up">
             <figure class="image">
-              <img src="/images/author.jpg" alt="{{ .Title }}">
+              <img src="/images/author.jpg" alt="{{ .Title }}" loading="lazy">
             </figure>
           </div>
           <div class="card-content has-background-dark-shade">
