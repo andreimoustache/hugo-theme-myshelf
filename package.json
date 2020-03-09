@@ -1,0 +1,7 @@
+{
+  "name": "hugo-theme-myshelf",
+  "version": "1.0.0",
+  "description": "A shelfish Hugo theme",
+  "author": "Andrei Mustață <hello@amoustache.net>",
+  "private": true
+}
