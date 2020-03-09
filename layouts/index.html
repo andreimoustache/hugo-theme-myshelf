@@ -12,7 +12,8 @@
               </figure>
             </div>
             <div class="column">
-          <h1 class="title has-text-primary">{{ .Title }}</h1>
+              <h1 class="title has-text-primary">{{ .Title }}</h1>
+              <h2 class="subtitle has-text-green-dark">{{ .Site.Params.subtitle | markdownify}}</h2>
             </div>
           </div>
         </div>
@@ -67,7 +68,7 @@
 </section>
 
 {{- range first 1 (where .Site.RegularPages "Type" "subscribe") -}}
-<section class="section has-background-accent-dark">
+<section class="section has-background-green-dark">
   <div class="container">
     <div class="columns is-centered is-vcentered">
       <div class="column is-one-quarter">

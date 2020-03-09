@@ -5,8 +5,10 @@
 $pomegranate: #ef3c1e;
 $san-marino: #3f57a1;
 $periwinkle-gray: #c3cae4;
-$mint-julep: #f1e1bf;
-$golden-grass: #d79922;
+$white-rock: #eae5d0;
+$golden-grass: #d79921;
+
+$some-green: #0e491d;
 
 $sycamore: #7d8d41;
 $sorbus: #fa7c09;
@@ -19,11 +21,12 @@ $success: $sycamore;
 $warning: $sorbus;
 $danger: $pomi;
 // $scheme-main: $san-marino;
-// $scheme-invert: $mint-julep;
+// $scheme-invert: $white-rock;
 
 $custom-colors: (
-  "accent-dark": ($san-marino, $mint-julep),
+  "accent-dark": ($san-marino, $white-rock),
   "accent-light": ($periwinkle-gray, $golden-grass),
   "shade-dark": ($golden-grass, $periwinkle-gray),
-  "shade-light": ($mint-julep, $san-marino)
+  "shade-light": ($white-rock, $some-green),
+  "green-dark": ($some-green, $white-rock)
 );
