@@ -26,10 +26,12 @@
   @extend .fadeInRight;
 }
 
-@for $i from 1 through 10 {
-  $delay-ms: $i * 10ms;
+.has-delayed-animations {
+  @for $i from 1 through 10 {
+    $delay-ms: $i * 50ms;
 
-  .is-delayed-#{$delay-ms} {
-    animation-delay: $delay-ms;
+    *:nth-child(#{$i}) {
+      animation-delay: $delay-ms;
+    }
   }
 }
