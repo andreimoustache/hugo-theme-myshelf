@@ -46,9 +46,9 @@
 
 <section class="section">
   <div class="container">
-    <div class="columns is-centered">
+    <div class="columns is-centered has-delayed-animations">
       {{ range (where .Pages ".Section" "in" .Site.Params.featured_sections) }}
-      <div class="column is-one-quarter">
+      <div class="column is-one-quarter is-animated slides-in-up">
         <div class="section-card is-animated slides-in-up has-background-shade-dark has-text-white">
           <div class="card-image is-animated slides-in-up">
             <figure class="image">
