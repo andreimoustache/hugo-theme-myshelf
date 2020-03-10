@@ -11,6 +11,17 @@
 
     <div class="columns is-centered">
       <div class="column is-half">
+        {{- range first 1 (where .Site.RegularPages "Type" "article-closing") -}}
+          <p class="content">
+            {{ .Content | markdownify }}
+          </p>
+        {{- end -}}
+      </div>
+      <div class="column is-one-quarter"></div>
+    </div>
+
+    <div class="columns is-centered">
+      <div class="column is-half">
         {{ template "_internal/disqus.html" . }}
       </div>
       <div class="column is-one-quarter"></div>
