@@ -1,10 +1,10 @@
 @charset "utf-8";
 
-@import "./animate.css/source/_base";
-@import "./animate.css/source/sliding_entrances/slideInUp";
-@import "./animate.css/source/sliding_entrances/slideInRight";
-@import "./animate.css/source/fading_entrances/fadeInRight";
-@import "./animate.css/source/fading_entrances/fadeIn";
+@import "../../node_modules/animate.css/source/_base";
+@import "../../node_modules/animate.css/source/sliding_entrances/slideInUp";
+@import "../../node_modules/animate.css/source/sliding_entrances/slideInRight";
+@import "../../node_modules/animate.css/source/fading_entrances/fadeInRight";
+@import "../../node_modules/animate.css/source/fading_entrances/fadeIn";
 
 .is-animated {
   @extend .animated;
