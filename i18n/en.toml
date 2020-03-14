@@ -22,3 +22,9 @@
 [reading_time]
     one = "{{ .Count }} minute"
     other = "{{ .Count }} minutes"
+
+[cookies_popup_accept]
+    other = "OK"
+
+[cookies_popup_read_more]
+    other = "Read more"

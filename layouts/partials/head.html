@@ -19,6 +19,6 @@
   {{ $styles := resources.Get "css/myshelf.css" | postCSS | minify | fingerprint "md5" }}
   <link rel="stylesheet" href="{{ $styles.Permalink }}" media="screen">
 
-  {{ template "_internal/google_analytics_async.html" . }}
+  {{ partial "google_analytics_async.html" . }}
 
 </head>

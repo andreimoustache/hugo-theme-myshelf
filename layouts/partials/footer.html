@@ -1,9 +1,10 @@
 {{- range first 1 (where .Site.RegularPages "Type" "cookies") -}}
-<section class="cookie-consent message is-accent-dark is-animated slides-in-right">
+<section id="cookie-consent-popup" class="cookie-consent message is-accent-dark is-hidden">
   <div class="message-header">{{ .Title }}</div>
   <div class="message-body">
     <p class="content">{{ .Description | markdownify }}</p>
-    <button class="button is-accent-dark is-fullwidth" onclick="this.parentElement.parentElement.style.display = 'none';">OK</button>
+    <button class="button is-accent-dark" onclick="this.dispatchEvent(new CustomEvent('cookieconsent', { bubbles: true, detail: { hasApproved: true } }));">{{ T "cookies_popup_accept" }}</button>
+    <a class="button is-link" href="{{ .Permalink }}">{{ T "cookies_popup_read_more" }}</a>
   </div>
 </section>
 {{- end -}}

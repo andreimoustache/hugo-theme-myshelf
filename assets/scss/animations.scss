@@ -3,6 +3,7 @@
 @import "../../node_modules/animate.css/source/_base";
 @import "../../node_modules/animate.css/source/sliding_entrances/slideInUp";
 @import "../../node_modules/animate.css/source/sliding_entrances/slideInRight";
+@import "../../node_modules/animate.css/source/sliding_exits/slideOutRight";
 @import "../../node_modules/animate.css/source/fading_entrances/fadeInRight";
 @import "../../node_modules/animate.css/source/fading_entrances/fadeIn";
 
@@ -16,6 +17,10 @@
 
 .slides-in-right {
   @extend .slideInRight;
+}
+
+.slides-out-right {
+  @extend .slideOutRight;
 }
 
 .fades-in {

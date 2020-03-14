@@ -1,0 +1,62 @@
+<script async src="https://www.googletagmanager.com/gtag/js?id={{ .Site.GoogleAnalytics }}"></script>
+<script>
+  var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+  var doNotTrack = (dnt == '1' || dnt == 'yes');
+  var cookiePopup;
+
+  function show (cookiePopup) {
+    cookiePopup.classList.remove('is-hidden');
+    cookiePopup.classList.add('is-animated', 'slides-in-right')
+  }
+
+  function hide (cookiePopup) {
+    cookiePopup.classList.add('slides-out-right');
+  }
+
+  function getCookie (name) {
+    var c = document.cookie.match('(^|[^;]+)\\s*' + name + '\\s*=\\s*([^;]+)');
+    return c ? c.pop() : '';
+  }
+
+  function setCookie (name, value) {
+    var expiryDate = new Date();
+    expiryDate.setHours(expiryDate.getHours() + (30 * 24)); 
+    var consentCookie = name + '=' + value +
+                    ';expires=' + expiryDate.toUTCString() +
+                    ';path=/' +
+                    ';domain={{ (urls.Parse .Site.BaseURL).Host }}' +
+                    ';secure';
+    document.cookie = consentCookie;
+  }
+
+  function enableGoogleAnalytics () {
+    if (!doNotTrack) {
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', '{{ .Site.Params.googleAnalytics }}');
+    }
+  }
+
+  window.addEventListener('load', function () {
+    var cookieConsent = getCookie('cookieconsent');
+    cookiePopup = document.querySelector('#cookie-consent-popup');
+
+    if (!cookieConsent) {
+      show(cookiePopup);
+    }
+    if (cookieConsent === 'allowed') {
+      enableGoogleAnalytics();
+    }
+  });
+
+  window.addEventListener('cookieconsent', function (ev) {
+    hide(cookiePopup);
+    if (ev.detail.hasApproved) {
+      enableGoogleAnalytics();
+      setCookie('cookieconsent', 'allowed');
+    } else {
+      setCookie('cookieconsent', 'rejected');
+    }
+  });
+</script>
