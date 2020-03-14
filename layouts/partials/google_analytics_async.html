@@ -2,10 +2,15 @@
 <script>
   var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
   var doNotTrack = (dnt == '1' || dnt == 'yes');
-  var cookiePopup = document.querySelector('#cookie-consent-popup');
+  var cookiePopup;
 
-  function showCookiePopup () {
-    console.log('Showing cookie pop-up.');
+  function show (cookiePopup) {
+    cookiePopup.classList.remove('is-hidden');
+    cookiePopup.classList.add('is-animated', 'slides-in-right')
+  }
+
+  function hide (cookiePopup) {
+    cookiePopup.classList.add('slides-out-right');
   }
 
   function getCookie (name) {
@@ -34,10 +39,11 @@
   }
 
   window.addEventListener('load', function () {
-    const cookieConsent = getCookie('cookieconsent');
+    var cookieConsent = getCookie('cookieconsent');
+    cookiePopup = document.querySelector('#cookie-consent-popup');
 
     if (!cookieConsent) {
-      showCookiePopup();
+      show(cookiePopup);
     }
     if (cookieConsent === 'allowed') {
       enableGoogleAnalytics();
@@ -45,6 +51,7 @@
   });
 
   window.addEventListener('cookieconsent', function (ev) {
+    hide(cookiePopup);
     if (ev.detail.hasApproved) {
       enableGoogleAnalytics();
       setCookie('cookieconsent', 'allowed');
