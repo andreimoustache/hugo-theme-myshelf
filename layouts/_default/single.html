@@ -9,16 +9,16 @@
       <div class="column is-one-quarter"></div>
     </div>
 
+    {{- with .Site.GetPage "page" "blog/article-closing" -}}
     <div class="columns is-centered">
       <div class="column is-half">
-        {{- range first 1 (where .Site.RegularPages "Type" "article-closing") -}}
           <p class="content">
             {{ .Content | markdownify }}
           </p>
-        {{- end -}}
       </div>
       <div class="column is-one-quarter"></div>
     </div>
+    {{- end -}}
 
     <div class="columns is-centered">
       <div class="column is-half">
