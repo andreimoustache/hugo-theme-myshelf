@@ -2,31 +2,27 @@
 
 @import "../../node_modules/bulma/sass/utilities/functions.sass";
 
-$pomegranate: #ef3c1e;
-$san-marino: #3f57a1;
-$periwinkle-gray: #c3cae4;
-$white-rock: #eae5d0;
-$golden-grass: #d79921;
+$night-shadz: rgb(186, 60, 81);
+$tango: rgb(237, 112, 20);
+$snow-drift: rgb(243, 247, 243);
+$regent-grey: rgb(134, 146, 165);
+$thunder: rgb(32, 21, 32);
 
-$some-green: #0e491d;
-
-$sycamore: #7d8d41;
-$sorbus: #fa7c09;
-$pomi: #f44336;
+$pomegranate: rgb(239, 60, 30);
+$asparagus: rgb(109, 141, 80);
+$parsley: rgb(14, 73, 29);
 
 // Update Bulma's global variables
-$primary: $pomegranate;
-$link: $periwinkle-gray;
-$success: $sycamore;
-$warning: $sorbus;
-$danger: $pomi;
-// $scheme-main: $san-marino;
-// $scheme-invert: $white-rock;
+$primary: $night-shadz;
+$link: $regent-grey;
+$success: $asparagus;
+$warning: $tango;
+$danger: $pomegranate;
+$text: $thunder;
 
 $custom-colors: (
-  "accent-dark": ($san-marino, $white-rock),
-  "accent-light": ($periwinkle-gray, $golden-grass),
-  "shade-dark": ($golden-grass, $periwinkle-gray),
-  "shade-light": ($white-rock, $some-green),
-  "green-dark": ($some-green, $white-rock)
+  "accent-dark": ($snow-drift, $tango),
+  "accent-light": ($tango, $snow-drift),
+  "shade-dark": ($thunder, $snow-drift),
+  "shade-light": ($snow-drift, $thunder)
 );
