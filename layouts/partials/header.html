@@ -1,7 +1,7 @@
 <nav class="navbar is-shade-light" role="navigation" aria-label="main navigation">
   <div class="navbar-brand">
     <a class="navbar-item" href="{{ .Site.BaseURL | relLangURL }}">
-      <img src="{{ .Site.Params.logo | absURL }}" alt="{{ .Site.Title }} logo">
+      <img src="{{ .Site.Params.navbarlogo | absURL }}" alt="{{ .Site.Title }} logo">
     </a>
     <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="shelfbar" onclick="this.classList.toggle('is-active'); document.querySelector('#shelfbar').classList.toggle('is-active');">
       <span aria-hidden="true"></span>
