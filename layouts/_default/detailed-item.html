@@ -1,4 +1,4 @@
-<div class="section-card has-background-shade-dark has-text-white is-animated slides-in-up">
+<div class="section-card has-background-shade-light is-animated slides-in-up">
   {{- if .Params.Image -}}
   <div class="card-image is-animated slides-in-up">
     <figure class="image">
@@ -16,10 +16,10 @@
       <br>
       {{ range .Params.Categories }}
       <a href="{{ `categories/` | relLangURL }}{{ . | urlize | lower }}"
-        class="text-primary">#{{ . | title | humanize }}</a>
+        class="has-text-accent-light">#{{ . | title | humanize }}</a>
       {{ end }}
     </p>
-    <h3 class="title is-3 has-text-white">{{ .Title }}</h3>
+    <h3 class="title is-3">{{ .Title }}</h3>
     <p class="content is-small">{{ .Description | markdownify}}</p>
     <div class="content">{{ .Content }}</div>
     <div class="level">

@@ -22,12 +22,12 @@
   </div>
 </section>
 
-<section class="section has-background-shade-dark has-text-white">
+<section class="section">
   <div class="container">
     <div class="columns is-centered">
       <div class="column is-two-thirds">
         {{- range first 1 (where .Site.RegularPages "Type" "about") -}}
-        <div class="columns is-vcentered is-variable is-8">
+        <div class="section-card columns is-vcentered is-variable is-8 has-background-accent-light has-text-shade-light">
           <div class="column is-one-third">
             <figure class="image is-rounded">
               <img src="{{ .Params.Image | absURL }}" alt="{{ .Title }}">
@@ -49,14 +49,14 @@
     <div class="columns is-centered has-delayed-animations">
       {{ range (where .Pages ".Section" "in" .Site.Params.featured_sections) }}
       <div class="column is-one-quarter is-animated slides-in-up">
-        <div class="section-card is-animated slides-in-up has-background-shade-dark has-text-white">
+        <div class="section-card is-animated slides-in-up has-text-shade-dark">
           <div class="card-image is-animated slides-in-up">
             <figure class="image">
               <img src="/images/author.jpg" alt="{{ .Title }}" loading="lazy">
             </figure>
           </div>
-          <div class="card-content has-background-dark-shade">
-            <h2 class="title is-2 has-text-white">{{ .Title }}</h2>
+          <div class="card-content">
+            <h2 class="title is-2">{{ .Title }}</h2>
             <p class="content">{{ .Description }}</p>
             <a href="{{ .Permalink }}" class="button is-primary is-fullwidth is-family-sans-serif">{{ T .Params.read_more_label | humanize }}</a>
           </div>
@@ -68,12 +68,12 @@
 </section>
 
 {{- range first 1 (where .Site.RegularPages "Type" "subscribe") -}}
-<section class="section has-background-green-dark">
+<section class="section has-background-shade-dark has-text-shade-light">
   <div class="container">
     <div class="columns is-centered is-vcentered">
       <div class="column is-one-quarter">
-        <h3 class="title is-3 has-text-white">{{ .Title }}</h3>
-        <p class="content has-text-white">{{ .Description }}</p>
+        <h3 class="title is-3 has-text-accent-light">{{ .Title }}</h3>
+        <p class="content">{{ .Description }}</p>
       </div>
       <div class="column is-half">
         {{ .Content | markdownify }}
