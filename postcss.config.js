@@ -21,7 +21,8 @@ module.exports = {
         'h5',
         'h6',
         'ul',
-        'li'
+        'li',
+        'is-accent-light'
       ]
     }
   }

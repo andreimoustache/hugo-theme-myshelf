@@ -2,27 +2,29 @@
 
 @import "../../node_modules/bulma/sass/utilities/functions.sass";
 
-$night-shadz: rgb(186, 60, 81);
-$tango: rgb(237, 112, 20);
-$snow-drift: rgb(243, 247, 243);
+$blue-bayoux: #1b2d51;
+$contessa: #b9606a;
+$sun: #ffa604;
+$catskill-light: #f5f9fa;
+$mirage: #1b2d51;
 $regent-grey: rgb(134, 146, 165);
-$thunder: rgb(32, 21, 32);
 
 $pomegranate: rgb(239, 60, 30);
 $asparagus: rgb(109, 141, 80);
 $parsley: rgb(14, 73, 29);
 
 // Update Bulma's global variables
-$primary: $night-shadz;
+$primary: $blue-bayoux;
 $link: $regent-grey;
 $success: $asparagus;
-$warning: $tango;
+$warning: $sun;
 $danger: $pomegranate;
-$text: $thunder;
+$text: $mirage;
 
 $custom-colors: (
-  "accent-dark": ($snow-drift, $tango),
-  "accent-light": ($tango, $snow-drift),
-  "shade-dark": ($thunder, $snow-drift),
-  "shade-light": ($snow-drift, $thunder)
+  "main-brand": $blue-bayoux,
+  "accent-dark": $contessa,
+  "accent-light": $sun,
+  "shade-dark": $mirage,
+  "shade-light": $catskill-light
 );

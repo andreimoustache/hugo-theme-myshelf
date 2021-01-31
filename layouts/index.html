@@ -27,7 +27,7 @@
     <div class="columns is-centered">
       <div class="column is-two-thirds">
         {{- range first 1 (where .Site.RegularPages "Type" "about") -}}
-        <div class="section-card columns is-vcentered is-variable is-8 has-background-accent-light has-text-shade-light">
+        <div class="section-card columns is-vcentered is-variable is-8 has-background-accent-dark has-text-shade-light">
           <div class="column is-one-third">
             <figure class="image is-rounded">
               <img src="{{ .Params.Image | absURL }}" alt="{{ .Title }}">
@@ -35,7 +35,7 @@
           </div>
           <div class="column">
             <p class="content is-medium">{{ .Description }}</p>
-            <a href="{{ .Permalink }}" class="button is-primary is-family-sans-serif">{{ T "landing_about_more" }}</a>
+            <a href="{{ .Permalink }}" class="button is-accent-dark is-inverted is-family-sans-serif">{{ T "landing_about_more" }}</a>
           </div>
         </div>
         {{- end -}}
@@ -58,7 +58,7 @@
           <div class="card-content">
             <h2 class="title is-2">{{ .Title }}</h2>
             <p class="content">{{ .Description }}</p>
-            <a href="{{ .Permalink }}" class="button is-primary is-fullwidth is-family-sans-serif">{{ T .Params.read_more_label | humanize }}</a>
+            <a href="{{ .Permalink }}" class="button is-accent-dark is-fullwidth is-family-sans-serif">{{ T .Params.read_more_label | humanize }}</a>
           </div>
         </div>
       </div>
