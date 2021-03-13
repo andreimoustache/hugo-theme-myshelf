@@ -15,9 +15,11 @@
   {{- template "_internal/opengraph.html" . -}}
   {{- template "_internal/twitter_cards.html" . -}}
 
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bree+Serif|Open+Sans">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bree+Serif|Open+Sans" media="none" onload="if(media!='all') media='all'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bree+Serif|Open+Sans" media='all'></noscript>
   {{ $styles := resources.Get "css/myshelf.css" | postCSS | minify | fingerprint "md5" }}
-  <link rel="stylesheet" href="{{ $styles.Permalink }}" media="screen">
+  <link rel="stylesheet" href="{{ $styles.Permalink }}" media="none" onload="if(media!='all')media='all'">
+  <noscript><link rel="stylesheet" href="{{ $styles.Permalink }}"></noscript>
 
   {{if site.GoogleAnalytics -}}
   {{ partial "google_analytics_async.html" . }}
