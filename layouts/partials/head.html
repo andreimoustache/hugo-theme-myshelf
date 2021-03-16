@@ -15,8 +15,19 @@
   {{- template "_internal/opengraph.html" . -}}
   {{- template "_internal/twitter_cards.html" . -}}
 
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bree+Serif|Open+Sans" media="none" onload="if(media!='all') media='all'">
-  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bree+Serif|Open+Sans" media='all'></noscript>
+  <link rel="preload" as="font" href="https://fonts.googleapis.com/css?family=Bree+Serif|Open+Sans" crossorigin>
+  <link rel="preload" href="https://studentmunch.com/wp-content/themes/studentmunch/fonts/quicksand.woff2" as="font" crossorigin>
+  <style>
+  @font-face {
+  font-family: 'Quicksand';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Quicksand Regular'), local('Quicksand-Regular'), url(https://studentmunch.com/wp-content/themes/studentmunch/fonts/quicksand.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  }
+  </style>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bree+Serif|Open+Sans" media="all">
+
   {{ $styles := resources.Get "css/myshelf.css" | postCSS | minify | fingerprint "md5" }}
   <link rel="stylesheet" href="{{ $styles.Permalink }}" media="none" onload="if(media!='all')media='all'">
   <noscript><link rel="stylesheet" href="{{ $styles.Permalink }}"></noscript>
