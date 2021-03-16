@@ -27,7 +27,7 @@
     <div class="columns is-centered">
       <div class="column is-two-thirds">
         {{- range first 1 (where .Site.RegularPages "Type" "about") -}}
-        <div class="section-card columns is-vcentered is-variable is-8 has-background-accent-dark has-text-shade-light">
+        <div class="columns is-rounded is-vcentered has-background-accent-dark has-text-shade-light">
           <div class="column is-one-third">
             <figure class="image is-rounded">
               <img src="{{ .Params.Image | absURL }}" alt="{{ .Title }}">
