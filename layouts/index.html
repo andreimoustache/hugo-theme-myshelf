@@ -34,7 +34,7 @@
             </figure>
           </div>
           <div class="column">
-            <p class="content is-medium">{{ .Description }}</p>
+            <p class="content is-medium">{{ .Description | markdownify }}</p>
             <a href="{{ .Permalink }}" class="button is-accent-dark is-inverted is-family-sans-serif">{{ T "landing_about_more" }}</a>
           </div>
         </div>
